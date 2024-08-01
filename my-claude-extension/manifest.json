@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Claude Chat Exporter",
+  "version": "1.0",
+  "description": "Export Claude chat conversations to text files",
+  "permissions": ["activeTab", "downloads"],
+  "host_permissions": ["https://claude.ai/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://claude.ai/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
